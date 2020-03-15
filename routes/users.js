@@ -33,9 +33,9 @@ router.post('/close', (req, res) => {
         }
         console.log('Closed the database connection.');
     });
-    res.redirect('/');
+    
     setTimeout(()=> {
-        process.exit(0);
+        res.redirect('/');
     }, 1000);
 });   
   
