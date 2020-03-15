@@ -1,0 +1,25 @@
+html
+    
+head
+        
+    body(backgroundColor="green")
+        
+        div
+        form(method="POST", action="/submit")
+             label Name:
+             br
+             input(type="text" id="name" name="name")
+             br
+             label Favorite Color:
+             br
+             input(type="text" id="fcolor" name="fcolor")
+             br
+             label Cats or Dogs:
+             br
+             input(type="text" id="cod" name="cod")
+             br
+             br
+             button(type="submit") Submit
+        div  
+        form(method="POST", action="/close")     
+             button(type="submit") Close DB
