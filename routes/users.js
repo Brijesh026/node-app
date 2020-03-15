@@ -3,9 +3,13 @@ const express = require('express');
 const router = express.Router();
 
 // open database in memory
+    
 let db = new sqlite3.Database(':memory:', (err) => {
     if (err) {
-      return console.error(err.message);
+        return (
+            console.log(err.message) ,
+            process.exit(0)
+        );
     }
     console.log('Connected to the in-memory SQlite database.');
 });
@@ -36,6 +40,7 @@ router.post('/close', (req, res) => {
     
     setTimeout(()=> {
         res.redirect('/');
+        process.exit(0);
     }, 1000);
 });   
   

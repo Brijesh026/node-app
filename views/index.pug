@@ -4,7 +4,7 @@ head
         
     body(backgroundColor="green")
         
-        div
+        div.container-fluid
         form(method="POST", action="/submit")
              label Name:
              br
@@ -20,6 +20,6 @@ head
              br
              br
              button(type="submit") Submit
-        div  
+        div.container-fluid  
         form(method="POST", action="/close")     
              button(type="submit") Close DB
